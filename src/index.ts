@@ -48,11 +48,11 @@ app.set('trust proxy', 1);
 
 app.use('/api/v1', indexRoute);
 app.use(errorHandler);
-const swaggerFile = yaml.parse(
-  fs.readFileSync(resolve('src/swagger.yaml'), 'utf8'),
-);
+// const swaggerFile = yaml.parse(
+//   fs.readFileSync(resolve('src/swagger.yaml'), 'utf8'),
+// );
 
-app.use('/documentation', swagger.serve, swagger.setup(swaggerFile));
+// app.use('/documentation', swagger.serve, swagger.setup(swaggerFile));
 app.listen(port, async () => {
   try {
     await database();

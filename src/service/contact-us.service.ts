@@ -18,7 +18,7 @@ export const create = async (createcontactDto: IContact) => {
   const subject = 'Contact us';
   const html = contactTemplate(createcontactDto);
 
-  sendMail({ from, html, subject, email: from });
+  sendMail({ from, html, subject, email: email });
 };
 
 export const find = async () => {

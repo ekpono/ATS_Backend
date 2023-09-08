@@ -34,7 +34,7 @@ export const create = async (
   }
 
   if (!profileImage) {
-    throw new ApiError(400, 'provide profile ilmage');
+    throw new ApiError(400, 'provide profile image');
   }
 
   const uploadedfile = await cloudinaryService(profileImage);
